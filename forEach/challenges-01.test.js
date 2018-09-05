@@ -144,6 +144,8 @@ const removeElements = (input, callback) => {
 
 const removeWithForEach = (input, callback) => {
   // Solution code here...
+  input.forEach(x => callback(x, input))
+  return input
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -159,6 +161,13 @@ const removeWithForEach = (input, callback) => {
 
 const removeWithAnon = (input) => {
   // Solution code here...
+  input.forEach((el, idx, arr) =>{
+    if (el % 3 === 2){
+        arr.pop()
+    }
+   
+  })
+  return input
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -181,6 +190,13 @@ const removeWithAnon = (input) => {
 
 const createList = (availableItems) => {
   // Solution code here...
+  let myList = [];
+  availableItems.forEach(el => {
+    if(el.available === true ){
+        myList.push(el.name)
+    }
+  })
+  return myList;
 }
 
 // ------------------------------------------------------------------------------------------------
