@@ -53,8 +53,7 @@ const addCurve = (arr) => {
   // Solution code here...
   const newScores = [];
   for (let score of arr){
-      score += (score * 0.05);
-      newScores.push(score);
+      newScores.push(score * 1.05);
   }
   return newScores;
 }
@@ -70,10 +69,12 @@ const addCurve = (arr) => {
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase()
 }
 
 const speaker = (message, callback) => {
   // Solution code here...
+  return callback(message)
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -95,10 +96,15 @@ const speaker = (message, callback) => {
 
 const addValues = (arr, value) => {
   // Solution code here...
+  return arr.push(value)
 }
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for(let i = 0; i < times; i++){
+    callback(arr, num)
+  }
+  return arr
 }
 
 // ------------------------------------------------------------------------------------------------
