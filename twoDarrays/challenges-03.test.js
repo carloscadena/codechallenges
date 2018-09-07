@@ -11,6 +11,7 @@ const nestedArray = [ [ [1, 2, 3], [4, 5, 6] ], [ [7, 8, 9], [10, 11, 12] ], [ [
 
 const findFourteen = (array) => {
   // Solution code here...
+  return array[2][0][1];
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -34,6 +35,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -56,6 +58,11 @@ const howManyTreats = (arr) => {
 
 const battleship = (board, row, col) => {
   // Solution code here...
+  if (board[row][col] === '#'){
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -70,6 +77,13 @@ const battleship = (board, row, col) => {
 
 const calculateProduct = (numbers) => {
   // Solution code here...
+  let total = 1;
+  for(let i = 0; i < numbers.length; i++){
+    for(let j = 0; j < numbers[i].length; j++){
+      total *= numbers[i][j];
+    }
+  }
+  return total;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -91,6 +105,13 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
+  let total = 0;
+  for(let i = 0; i < weather.length; i++){
+    for(let j = 0; j < weather[i].length; j++){
+      total += weather[i][j];
+    }
+  }
+  return (total/7/weather.length);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -113,6 +134,21 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
+  const lows = [];
+  weather.forEach(el =>{
+    let total = 0;
+    for(let temp of el){
+      total += temp;
+    }
+    lows.push(total/7);
+  });
+  let lowest = 1000;
+  for(let num of lows){
+    if(num < lowest) {
+      lowest = num;
+    }
+  }
+  return lowest;
 };
 
 // ------------------------------------------------------------------------------------------------
