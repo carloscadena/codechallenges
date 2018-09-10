@@ -77,6 +77,9 @@ const citiesAtoJ = (cities) => {
 
 const matchMonth = (input) => {
   // Solution code here...
+  const re = /^[Oo]cto*b*e*r*$/
+  if(re.test(input)) return true;
+  else return false;
 };
 
 // ------------------------------------------------------------------------------------------------
