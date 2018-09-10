@@ -144,11 +144,19 @@ const splitFoods = (recipe) => {
   // Solution code here...
   let ingred = recipe.ingredients;
   ingred.forEach(el => {
-    let temp = el.split(' ')
-    
-  })
+    let temp = el.split(' ').slice(2);
+    let tempStr = '';
+    for(let i = 0; i < temp.length; i++){
+      if(i === temp.length - 1) {
+        tempStr += temp[i];
+      } else {
+        tempStr += temp[i] + ' ';
+      }
+    }
+    result.push(tempStr);
+  });
   return result;
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
