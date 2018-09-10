@@ -142,6 +142,11 @@ const stepActions = (recipe) => {
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  let ingred = recipe.ingredients;
+  ingred.forEach(el => {
+    let temp = el.split(' ')
+    
+  })
   return result;
 }
 
