@@ -35,7 +35,7 @@ const howMuchPencil = (name) => {
 
 const wordsToCharList = (input) => {
   // Solution code here...
-  return input.split('')
+  return input.split('');
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -97,12 +97,20 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
+  const ingred = recipe.ingredients;
   // Solution code here...
-  for(let i = recipe.ingredients.length - 1; i > 0; i--){
-    if(recipe.ingredients[i])
-  }
+  ingred.forEach(el => {
+    let spaces = 0;
+    for(let i = 0; i < el.length; i++){
+      if(el[i] === ' ') spaces += 1;
+      if (spaces === 2) {
+        result.push(el.slice(i + 1));
+        i = el.length;
+      }
+    }
+  });
   return result;
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -118,8 +126,11 @@ const listFoods = (recipe) => {
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.steps.forEach(el => {
+    result.push(el.split(' ')[0]);
+  });
   return result;
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
