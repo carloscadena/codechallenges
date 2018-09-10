@@ -33,6 +33,17 @@ const isNum = (num) => {
 
 const isCapitalized = (string) => {
   // Solution code here...
+  const re = /[A-Z]/;
+  const arr = string.split(' ');
+  const newArr = [];
+  console.log(arr);
+  for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+    if(re.test(arr[i])){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -186,7 +197,7 @@ describe('Testing challenge 5', () => {
   });
 
   test('It should not contain words that are followed by any non-space character', () => {
-    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.'])
+    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.']);
   });
 });
 
