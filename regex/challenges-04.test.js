@@ -16,6 +16,10 @@
 
 const isNum = (num) => {
   // Solution code here...
+  const re = /\d/;
+  if(re.test(num)) return true;
+  else return false;
+
 };
 
 // ------------------------------------------------------------------------------------------------
