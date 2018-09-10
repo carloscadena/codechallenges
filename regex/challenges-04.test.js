@@ -36,9 +36,7 @@ const isCapitalized = (string) => {
   const re = /[A-Z]/;
   const arr = string.split(' ');
   const newArr = [];
-  console.log(arr);
   for(let i = 0; i < arr.length; i++){
-    console.log(arr[i]);
     if(re.test(arr[i])){
       newArr.push(arr[i]);
     }
@@ -55,6 +53,14 @@ const isCapitalized = (string) => {
 
 const citiesAtoJ = (cities) => {
   // Solution code here...
+  const re = /^(\b[A-J]\w*\s*)+$/;
+  const cityArr = [];
+  for(let i = 0; i < cities.length; i++){
+    if(re.test(cities[i])){
+      cityArr.push(cities[i]);
+    }
+  }
+  return cityArr;
 };
 
 // ------------------------------------------------------------------------------------------------
