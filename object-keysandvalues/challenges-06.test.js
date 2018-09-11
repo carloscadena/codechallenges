@@ -9,7 +9,8 @@
 
 const getKeys = (obj) => {
   // Solution code here...
-}
+  return Object.keys(obj);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
