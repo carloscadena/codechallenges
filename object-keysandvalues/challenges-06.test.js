@@ -114,7 +114,12 @@ let characters = [
 
 const totalCharacters = (arr) => {
   // Solution code here...
-}
+  const chars = [];
+  arr.forEach(el => {
+    chars.push(getFrom(el, 'keys'));
+  });
+  return chars.length;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
@@ -125,7 +130,16 @@ const totalCharacters = (arr) => {
 
 const getHouses = (arr) => {
   // Solution code here...
-}
+  const chars = [];
+  const houses = [];
+  arr.forEach(el => {
+    chars.push(getFrom(el, 'values'));
+  });
+  for(let i = 0; i < chars.length; i++){
+    houses.push(chars[i][3]);
+  }
+  return houses;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -136,7 +150,17 @@ const getHouses = (arr) => {
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-}
+  const chars = [];
+  arr.forEach(el => {
+    chars.push(getFrom(el, 'values'));
+  });
+  let kids;
+  for(let idx in chars){
+    if(chars[idx][0] === character) kids = chars[idx][2];
+  }
+  if (kids.length) return true;
+  else return false;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
