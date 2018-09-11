@@ -172,6 +172,15 @@ const hasChildrenValues = (arr, character) => {
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let arrArr = getFrom(arr, 'entries');
+  let kids;
+  arrArr.forEach(el => {
+    if(el[1].name === character){
+      kids = el[1].children;
+    }
+  })
+  if (kids.length) return true;
+  else return false;
 }
 
 // ------------------------------------------------------------------------------------------------
