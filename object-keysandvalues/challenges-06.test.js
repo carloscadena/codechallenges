@@ -21,6 +21,7 @@ const getKeys = (obj) => {
 
 const getValues = (obj) => {
   // Solution code here...
+  return Object.values(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
