@@ -33,7 +33,8 @@ const getValues = (obj) => {
 
 const getEntries = (obj) => {
   // Solution code here...
-}
+  return Object.entries(obj);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
