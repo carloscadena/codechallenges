@@ -52,7 +52,11 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getFrom = (obj, property) => {
   // Solution code here...
-}
+  if (property === 'keys') return Object.keys(obj);
+  if (property === 'values') return Object.values(obj);
+  if (property === 'entries') return Object.entries(obj);
+  
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
