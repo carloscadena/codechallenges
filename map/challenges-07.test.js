@@ -18,7 +18,7 @@ const forLoopTwoToThe = (input) => {
   for(let num of input){
     newArr.push(Math.pow(2, num));
   }
-  return newArr
+  return newArr;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -48,7 +48,7 @@ const forEachTwoToThe = (input) => {
 const mapTwoToThe = (input) => {
   // Solution code here...
   return input.map(el => Math.pow(2, el));
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -63,6 +63,7 @@ const mapTwoToThe = (input) => {
 
 const charCode = (input) => {
   // Solution code here...
+  return input.map(el => el.charCodeAt(0));
 };
 
 // ------------------------------------------------------------------------------------------------
