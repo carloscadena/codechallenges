@@ -79,6 +79,11 @@ const charCode = (input) => {
 
 const evenOdd = (input) => {
   // Solution code here...
+  return input.map(el => {
+    if (typeof el !== 'number') return 'N/A';
+    else if(el % 2 === 0) return 'even';
+    else return 'odd';
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -123,7 +128,9 @@ const snorlaxAbilities = {
 
 const extractAbilities = (abilities) => {
   // Solution code here...
+  return Object.values(abilities).map(el => el.ability.name);
 };
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -170,6 +177,7 @@ const snorlaxStats = {
 
 const extractStats = (stats) => {
   // Solution code here...
+  return stats.map(el => ({'name': el.stat.name, 'total': el.effort + el.baseStat}));
 };
 
 // ------------------------------------------------------------------------------------------------
