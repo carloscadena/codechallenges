@@ -29,6 +29,7 @@ const oddValues = (input) => {
 
 const filterStringsWithVowels = (input) => {
   // Solution code here...
+  return input.filter(el => /[aeiou]/i.test(el));
 };
 
 
@@ -43,6 +44,7 @@ const filterStringsWithVowels = (input) => {
 
 const notInFirstArray = (forbiddenValues, input) => {
   // Solution code here...
+  return input.filter(el => !forbiddenValues.includes(el))
 };
 
 // ------------------------------------------------------------------------------------------------
