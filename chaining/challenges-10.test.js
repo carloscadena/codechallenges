@@ -34,6 +34,7 @@ const count = (target, input) => {
 
 const totalSum = (input) => {
   // Solution code here...
+  return input.reduce((acc, ele) => acc.concat(ele), []).reduce((a,b) => a + b);
 };
 
 // ------------------------------------------------------------------------------------------------
