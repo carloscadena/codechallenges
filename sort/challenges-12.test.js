@@ -151,6 +151,15 @@ const sortPeople = (people) => {
 
 const sortPeopleBetter = (people) => {
   // Solution code here...
+  return people.sort((a, b) => {
+    if (a.lastName > b. lastName){
+      return 1;
+    } else if (a.lastName === b. lastName){
+      return 0;
+    } else {
+      return -1;
+    }
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
