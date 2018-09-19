@@ -160,21 +160,23 @@ const sortPeople = (people) => {
 
 const sortPeopleBetter = (people) => {
   // Solution code here...
-  return people.sort((a, b) => {
-    if (a.lastName > b.lastName){
-      return 1;
-    } else if (a.lastName === b. lastName){
-      if (a.firstName > b. firstName){
-        return 1;
-      } else if (a.firstName === b. firstName){
-        return 0;
-      } else {
-        return -1;
-      }
-    } else {
-      return -1;
-    }
-};
+  // return people.sort((a, b) => {
+  //   if (a.lastName > b.lastName){
+  //     return 1;
+  //   } else if (a.lastName === b. lastName){
+  //     if (a.firstName > b. firstName){
+  //       return 1;
+  //     } else if (a.firstName === b. firstName){
+  //       if (a.age > b.age) return 1
+  //       if (a.age === b.age) return 0
+  //       else {return -1}
+  //     } else {
+  //       return -1;
+  //     }
+  //   } else {
+  //     return -1;
+  //   }
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
