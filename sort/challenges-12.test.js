@@ -24,6 +24,7 @@ const sortBackwards = (nums) => {
 
 const alphabetize = (strings) => {
   // Solution code here...
+  return strings.sort();
 };
 
 // ------------------------------------------------------------------------------------------------
