@@ -49,7 +49,7 @@ const standardizePhoneNumbers = (phoneNumbers) => {
 
 const onlyOddChars = (str) => {
   // Solution code here...
-  return str.every(char => str.indexOf(char) % 2 === 1)
+  return str.split('').filter(char => str.indexOf(char) % 2 === 1).join('');
 };
 
 // ------------------------------------------------------------------------------------------------
