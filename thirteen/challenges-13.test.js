@@ -73,6 +73,7 @@ const allHappy = (strs) => {
 
 const findAnything = (strs, target) => {
   // Solution code here...
+  return strs.filter(el => el.includes(target));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -183,23 +184,23 @@ describe('Testing challenge 5', () => {
   });
 });
 
-// describe('Testing challenge 6', () => {
-//   test('It should find all the strings that contain a given string', () => {
-//     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
+describe('Testing challenge 6', () => {
+  test('It should find all the strings that contain a given string', () => {
+    const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
-//     expect(findAnything(words, ':)')).toStrictEqual(findHappiness(words));
-//     expect(findAnything(words, 'i')).toStrictEqual(['things', 'missing that thing']);
-//   });
-// });
+    expect(findAnything(words, ':)')).toStrictEqual(findHappiness(words));
+    expect(findAnything(words, 'i')).toStrictEqual(['things', 'missing that thing']);
+  });
+});
 
-// describe('Testing challenge 7', () => {
-//   test('It should determine whether all the strings contain a given string', () => {
-//     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
+describe('Testing challenge 7', () => {
+  test('It should determine whether all the strings contain a given string', () => {
+    const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
-//     expect(allAnything(words, 'a')).toStrictEqual(false);
-//     expect(allAnything(words, '')).toStrictEqual(true);
-//   });
-// });
+    expect(allAnything(words, 'a')).toStrictEqual(false);
+    expect(allAnything(words, '')).toStrictEqual(true);
+  });
+});
 
 // describe('Testing challenge 8', () => {
 //   test('It should remove Brook from all courses', () => {
