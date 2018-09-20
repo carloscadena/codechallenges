@@ -85,6 +85,7 @@ const findAnything = (strs, target) => {
 
 const allAnything = (strs, target) => {
   // Solution code here...
+  return strs.every(el => el.includes(target));
 };
 
 // ------------------------------------------------------------------------------------------------
