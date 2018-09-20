@@ -220,21 +220,21 @@ describe('Testing challenge 8', () => {
   });
 });
 
-// describe('Testing challenge 9', () => {
-//   test('It should sort events by the day on which they happen', () => {
-//     const events = ['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7', 'in the club on a Tuesday', 'Thursday Night Code'];
+describe('Testing challenge 9', () => {
+  test('It should sort events by the day on which they happen', () => {
+    const events = ['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7', 'in the club on a Tuesday', 'Thursday Night Code'];
 
-//     const sortedEvents = sortByDay(events);
+    const sortedEvents = sortByDay(events);
 
-//     expect(sortedEvents[0]).toEqual(expect.arrayContaining(['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7']));
-//     expect(sortedEvents[1]).toEqual(expect.arrayContaining(['Dancing on Mondays and Tuesdays', 'in the club on a Tuesday']));
-//     expect(sortedEvents[2]).toStrictEqual([]);
-//     expect(sortedEvents[3]).toStrictEqual(['Thursday Night Code']);
-//     expect(sortedEvents[4]).toStrictEqual([]);
-//     expect(sortedEvents[5]).toStrictEqual([]);
-//     expect(sortedEvents[6]).toStrictEqual([]);
-//   });
-// });
+    expect(sortedEvents[0]).toEqual(expect.arrayContaining(['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7']));
+    expect(sortedEvents[1]).toEqual(expect.arrayContaining(['Dancing on Mondays and Tuesdays', 'in the club on a Tuesday']));
+    expect(sortedEvents[2]).toStrictEqual([]);
+    expect(sortedEvents[3]).toStrictEqual(['Thursday Night Code']);
+    expect(sortedEvents[4]).toStrictEqual([]);
+    expect(sortedEvents[5]).toStrictEqual([]);
+    expect(sortedEvents[6]).toStrictEqual([]);
+  });
+});
 
 // describe('Testing challenge 10', () => {
 //   test('It should return the ith character of the ith string', () => {
