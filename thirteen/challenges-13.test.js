@@ -122,6 +122,7 @@ const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sat
 
 const sortByDay = (eventStrings) => {
   // Solution code here...
+  return eventStrings.
 };
 
 // ------------------------------------------------------------------------------------------------
